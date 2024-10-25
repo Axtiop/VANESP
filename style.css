@@ -1,0 +1,189 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d3edff; /* Light background color */
+    color: #001C55; /* Default text color */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0A2472; /* New color */
+    padding: 1.5rem 1rem; /* Increase padding for a larger appearance */
+    font-size: 1.1rem; /* Increase font size */
+}
+
+.navbar-brand {
+    color: #d3edff !important; /* Light text for the brand */
+    font-size: 2.5rem; /* Slightly larger brand text */
+}
+
+.navbar-toggler {
+    border-color: #d3edff; /* Light border for the toggle button */
+}
+
+.navbar-toggler-icon {
+    color: #d3edff;
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #d3edff !important; /* Light text for links */
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem; /* Add padding for larger clickable area */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #0E6BA8 !important; /* New hover color */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background highlight on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Active Navbar Link */
+.nav-item.active .nav-link {
+    color: #0E6BA8 !important; /* New active link color */
+    font-weight: bold; /* Highlight the active link */
+}
+
+/* Language Switch Button */
+.btn-outline-light {
+    color: #d3edff;
+    border-color: #d3edff;
+    padding: 0.5rem 1.5rem; /* Increase padding for a larger button */
+    font-size: 1.1rem; /* Slightly larger button text */
+}
+
+.btn-outline-light:hover {
+    color: #0A2472;
+    background-color: #d3edff;
+    border-color: #d3edff;
+}
+
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #0A2472; /* New color as background fallback */
+}
+
+.hero-section h1 {
+    color: #d3edff; /* Light text for title */
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    color: #0E6BA8; /* New color for the paragraph */
+    font-size: 1.2rem;
+}
+
+/* Team Section */
+#team img {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+#team h2 {
+    color: #0E6BA8; /* New color for headings */
+}
+
+#team p {
+    color: #001C55; /* Darker text for contrast */
+}
+
+/* Team Members Section */
+#members {
+    background-color: #d3edff; /* New light background */
+}
+
+#members h2 {
+    color: #0A2472; /* New color for heading */
+}
+
+#members h4 {
+    color: #0E6BA8; /* New color for member names */
+}
+
+#members p {
+    color: #001C55; /* Dark text for descriptions */
+}
+
+/* Adjusting the size of the circle images */
+#members img {
+    width: 250px;  /* Adjust the width */
+    height: 300px; /* Adjust the height to match for a perfect circle */
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+}
+
+#members .btn-primary {
+    background-color: #0A2472;
+    border-color: #0A2472;
+}
+
+#members .btn-primary:hover {
+    background-color: #0E6BA8; /* New hover color */
+    border-color: #0E6BA8;
+}
+
+/* Practical Information Section */
+#practical-info h2, #practical-info h4 {
+    color: #0A2472; /* New color for headings */
+}
+
+#practical-info ul li {
+    color: #001C55; /* Default text color for list items */
+}
+
+/* Meeting Form Section */
+#meeting {
+    background-color: #d3edff; /* Light background */
+}
+
+#meeting h2 {
+    color: #0E6BA8; /* New color for form section */
+}
+
+#meeting .btn-primary {
+    background-color: #0A2472;
+    border-color: #0A2472;
+}
+
+#meeting .btn-primary:hover {
+    background-color: #0E6BA8; /* New hover color */
+    border-color: #0E6BA8;
+}
+
+
+/* Map Section */
+#location h2 {
+    color: #0A2472;
+}
+
+/* Footer Section */
+footer {
+    background-color: #0A2472; /* New color for footer */
+    color: #d3edff; /* Light text for footer */
+}
+
+footer a {
+    color: #0E6BA8; /* New link color */
+}
+
+footer a:hover {
+    color: #0E6BA8; /* New hover color */
+}
+
+/* Social Media Icons */
+footer .fa-facebook, footer .fa-instagram {
+    color: #0E6BA8; /* New color */
+}
+
+footer .fa-facebook:hover, footer .fa-instagram:hover {
+    color: #0E6BA8; /* New hover effect */
+}
