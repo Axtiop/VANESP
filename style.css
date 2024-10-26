@@ -1,66 +1,47 @@
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #d3edff; /* Light background color */
-    color: #001C55; /* Default text color */
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff; /* Light background color */
+    color: #79ADDC; /* Default text color */
 }
 
-/* Navbar */
+/* Sticky Navbar */
 .navbar {
-    background-color: #0A2472; /* New color */
-    padding: 1.5rem 1rem; /* Increase padding for a larger appearance */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensures it stays above the hero section initially */
+    background-color: transparent; /* Initial transparent background */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 1rem 1rem; /* Increase padding for a larger appearance */
     font-size: 1.1rem; /* Increase font size */
 }
 
-.navbar-brand {
-    color: #d3edff !important; /* Light text for the brand */
-    font-size: 2.5rem; /* Slightly larger brand text */
+/* Add background color and shadow on scroll */
+.navbar.scrolled {
+    background-color: #FFFFFF;
+    color: #0681fc; /* Adjust text color if needed */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
-.navbar-toggler {
-    border-color: #d3edff; /* Light border for the toggle button */
+/* Navbar Links Color Change on Scroll */
+.navbar.scrolled .nav-link {
+    color: #0681fc !important;
 }
 
-.navbar-toggler-icon {
-    color: #d3edff;
+.navbar.scrolled .navbar-brand {
+    color: #0681fc !important;
 }
 
-/* Navbar Links */
-.nav-link {
-    color: #d3edff !important; /* Light text for links */
-    font-size: 1.3rem;
-    padding: 0.5rem 1rem; /* Add padding for larger clickable area */
+.navbar.scrolled .btn-outline-light {
+    color: #0681fc;
+    border-color: #0681fc;
 }
 
-.nav-link:hover, .nav-link:focus {
-    color: #0E6BA8 !important; /* New hover color */
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle background highlight on hover */
-    border-radius: 5px; /* Rounded corners on hover */
-}
-
-/* Active Navbar Link */
-.nav-item.active .nav-link {
-    color: #0E6BA8 !important; /* New active link color */
-    font-weight: bold; /* Highlight the active link */
-}
-
-/* Language Switch Button */
-.btn-outline-light {
-    color: #d3edff;
-    border-color: #d3edff;
-    padding: 0.5rem 1.5rem; /* Increase padding for a larger button */
-    font-size: 1.1rem; /* Slightly larger button text */
-}
-
-.btn-outline-light:hover {
-    color: #0A2472;
-    background-color: #d3edff;
-    border-color: #d3edff;
-}
-
-
-/* Hero Section */
+/* Padding for content below navbar */
 .hero-section {
+    padding-top: 5rem; /* Adjust padding based on navbar height */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -69,17 +50,17 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #0A2472; /* New color as background fallback */
+    background-color: #79ADDC; /* New color as background fallback */
 }
 
 .hero-section h1 {
-    color: #d3edff; /* Light text for title */
+    color: #ffffff; /* Light text for title */
     font-size: 3rem;
     font-weight: bold;
 }
 
 .hero-section p {
-    color: #0E6BA8; /* New color for the paragraph */
+    color: #79ADDC; /* New color for the paragraph */
     font-size: 1.2rem;
 }
 
@@ -90,100 +71,195 @@ body {
 }
 
 #team h2 {
-    color: #0E6BA8; /* New color for headings */
+    color: #0681fc; /* Primary blue color for headings */
+    font-weight: bold;
 }
 
 #team p {
-    color: #001C55; /* Darker text for contrast */
+    color: #333; /* Black for readability */
+    text-align: justify;
+    hyphens: auto;
 }
+
+#team ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#team ul li {
+    color: #000000; /* Black for list items */
+    margin-bottom: 0.5em;
+    text-align: justify;
+    hyphens: auto;
+}
+
+#team p em, #team ul li em {
+    color: #0681fc; /* Primary blue for emphasized text */
+}
+
+
+
 
 /* Team Members Section */
 #members {
-    background-color: #d3edff; /* New light background */
+    background-color: #e7e7e7; /* Light background */
 }
 
 #members h2 {
-    color: #0A2472; /* New color for heading */
+    color: #0681fc; /* Heading color */
 }
 
 #members h4 {
-    color: #0E6BA8; /* New color for member names */
+    color: #0681fc; /* Member name color */
 }
 
 #members p {
-    color: #001C55; /* Dark text for descriptions */
+    color: black;
 }
 
 /* Adjusting the size of the circle images */
 #members img {
-    width: 250px;  /* Adjust the width */
-    height: 300px; /* Adjust the height to match for a perfect circle */
-    object-fit: cover; /* Ensures the image covers the circle without distortion */
+    width: 250px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+/* Aligning buttons */
+#members .col-md-4 {
+    display: flex;
+    flex-direction: column;
 }
 
 #members .btn-primary {
-    background-color: #0A2472;
-    border-color: #0A2472;
+    background-color: #0681fc;
+    margin-top: auto; /* Align button to the bottom */
 }
 
 #members .btn-primary:hover {
-    background-color: #0E6BA8; /* New hover color */
-    border-color: #0E6BA8;
+    background-color: #030816;
+    border-color: #FCF5C7;
+}
+
+#members em {
+    color: #79ADDC;
 }
 
 /* Practical Information Section */
-#practical-info h2, #practical-info h4 {
-    color: #0A2472; /* New color for headings */
+#practical-info {
+    background-color: #f7f9fc; /* Light background color for better separation */
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#practical-info h2 {
+    color: #0681fc;
+    font-weight: bold;
+}
+
+#practical-info h4 {
+    color: #0681fc;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and heading text */
+}
+
+#practical-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+#practical-info .spec {
+    gap: 5px;
 }
 
 #practical-info ul li {
-    color: #001C55; /* Default text color for list items */
+    color: #333;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and list text */
+}
+
+#practical-info ul li i {
+    color: #0681fc; /* Icon color */
+    font-size: 1.2em;
+}
+
+#practical-info ul li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+
+#practical-info .col-md-6 {
+    margin-top: 1.2rem;
 }
 
 /* Meeting Form Section */
 #meeting {
-    background-color: #d3edff; /* Light background */
+    background-color: #e7e7e7; /* Light background */
 }
 
 #meeting h2 {
-    color: #0E6BA8; /* New color for form section */
+    color: #0681fc; /* New color for form section */
 }
 
-#meeting .btn-primary {
-    background-color: #0A2472;
-    border-color: #0A2472;
+#meeting h4 {
+    color: black; /* New color for form section */
 }
 
-#meeting .btn-primary:hover {
-    background-color: #0E6BA8; /* New hover color */
-    border-color: #0E6BA8;
+#meeting p em{
+    color: #0681fc; /* New color for form section */
 }
+
+#meeting p {
+    color: black; /* New color for form section */
+}
+
+#meeting ul{
+    color: black; /* New color for form section */
+}
+
+
+
 
 
 /* Map Section */
 #location h2 {
-    color: #0A2472;
+    color: #0681fc;
+}
+
+#location p {
+    color: black;
+}
+
+#location p em{
+    color: #79ADDC;
 }
 
 /* Footer Section */
 footer {
-    background-color: #0A2472; /* New color for footer */
-    color: #d3edff; /* Light text for footer */
+    background-color: #79ADDC; /* New color for footer */
+    color: #FFF5D4; /* Light text for footer */
 }
 
 footer a {
-    color: #0E6BA8; /* New link color */
+    color: #FCF5C7; /* New link color */
 }
 
 footer a:hover {
-    color: #0E6BA8; /* New hover color */
+    color: #FCF5C7; /* New hover color */
 }
 
 /* Social Media Icons */
 footer .fa-facebook, footer .fa-instagram {
-    color: #0E6BA8; /* New color */
+    color: #ffffff; /* New color */
 }
 
 footer .fa-facebook:hover, footer .fa-instagram:hover {
-    color: #0E6BA8; /* New hover effect */
+    color: #FCF5C7; /* New hover effect */
 }
